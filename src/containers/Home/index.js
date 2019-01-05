@@ -1,9 +1,18 @@
 import React, { Component } from 'react'
 import Heading from '../../components/Heading'
+import { Container, MainImage } from './styles'
+import backgroundImage from './SpringMountains.jpg'
+import Info from './components/Info'
 
 class Home extends Component {
   render() {
-    return <Heading> Spencer Tiberi </Heading>
+    return (
+      <Container>
+        <Heading scroll> ティベリ </Heading>
+        <MainImage src={backgroundImage} alt="Spencer" />
+        <Info />
+      </Container>
+    )
   }
 }
 

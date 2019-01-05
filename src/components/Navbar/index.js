@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Container, Desktop, Icon, Logo, Menu, Mobile, NavItem } from './styles'
+import { withRouter } from 'react-router-dom'
 import logo from './st.png'
 
 class Navbar extends Component {
@@ -15,10 +16,36 @@ class Navbar extends Component {
         <Container>
           <Logo src={logo} alt="Spencer Tiberi Logo" />
           <Desktop>
-            <NavItem to="/">Home</NavItem>
-            <NavItem to="/about">About</NavItem>
-            <NavItem to="/resume">Resume</NavItem>
-            <NavItem to="/portfolio">Portfolio</NavItem>
+            <NavItem
+              to="/"
+              className={this.props.location.pathname === '/' ? 'active' : ''}
+            >
+              Home
+            </NavItem>
+            <NavItem
+              to="/about"
+              className={
+                this.props.location.pathname === '/about' ? 'active' : ''
+              }
+            >
+              About
+            </NavItem>
+            <NavItem
+              to="/resume"
+              className={
+                this.props.location.pathname === '/resume' ? 'active' : ''
+              }
+            >
+              Resume
+            </NavItem>
+            <NavItem
+              to="/portfolio"
+              className={
+                this.props.location.pathname === '/portfolio' ? 'active' : ''
+              }
+            >
+              Portfolio
+            </NavItem>
           </Desktop>
         </Container>
         <Mobile>
@@ -46,4 +73,4 @@ class Navbar extends Component {
   }
 }
 
-export default Navbar
+export default withRouter(Navbar)

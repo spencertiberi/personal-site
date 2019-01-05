@@ -9,5 +9,5 @@ export const Container = styled(Flex)`
   justify-content: space-around;
   font-family: ${({ theme }) => theme.fonts.main};
   color: ${({ theme }) => theme.colors.headerAlt}
-  background-color: ${({ theme }) => theme.colors.header};
+  background-color: ${({ theme }) => theme.colors.background};
 `

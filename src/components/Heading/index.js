@@ -1,8 +1,8 @@
 import React from 'react'
 import { Container, Header } from './styles'
 
-const Heading = ({ children }) => (
-  <Container>
+const Heading = ({ children, scroll }) => (
+  <Container scroll={scroll}>
     <Header>{children}</Header>
   </Container>
 )

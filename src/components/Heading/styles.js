@@ -6,6 +6,15 @@ export const Container = styled(Flex)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: ${props => (props.scroll ? 'sticky' : 'relative')};
+  top: ${props => (props.scroll ? '1em' : '0')};
+  z-index: 100;
+
+  @media only screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.small.ceiling}) {
+    position: relative;
+    top: 0;
+  }
 `
 
 export const Header = styled(Flex)`
