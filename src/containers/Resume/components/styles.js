@@ -6,7 +6,8 @@ export const Company = styled(Flex)`
   align-self: flex-start;
   font-size: 1.25em;
   padding: 0.25em 0em 0.25em 0em;
-  color: ${({ theme }) => theme.colors.header};
+  color: ${props => ({ theme }) =>
+    props.alt ? theme.colors.headerAlt : theme.colors.header};
 
   @media only screen and (max-width: ${({ theme }) =>
       theme.breakpoints.small.ceiling}) {
@@ -38,9 +39,10 @@ export const Container = styled(Flex)`
 `
 
 export const Dates = styled(Flex)`
-  font-size: 0.75em;
+  font-size: 0.85em;
   align-self: flex-end;
-  color: ${({ theme }) => theme.colors.header};
+  color: ${props => ({ theme }) =>
+    props.alt ? theme.colors.headerAlt : theme.colors.header};
 
   @media only screen and (max-width: ${({ theme }) =>
       theme.breakpoints.small.ceiling}) {

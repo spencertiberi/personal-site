@@ -9,6 +9,7 @@ import Home from './containers/Home/'
 import About from './containers/About'
 import Resume from './containers/Resume/'
 import Navbar from './components/Navbar/'
+import Footer from './components/Footer'
 
 // creates new client
 const client = new ApolloClient({
@@ -22,6 +23,7 @@ const View = ({ component: MainComponent, purple, path, ...rest }) => (
       <div>
         <Navbar />
         <MainComponent {...props} />
+        <Footer />
       </div>
     )}
   />

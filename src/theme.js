@@ -12,9 +12,11 @@ const theme = {
     }
   },
   colors: {
-    background: '#754C69', // 'floralwhite'
-    header: '#C99DB8', // 'seagreen',
-    mainFont: '#F4E8EC' // 'darkseagreen'
+    background: '#EE6D48',
+    backgroundAlt: '#98C988',
+    header: '#FDBE6A',
+    headerAlt: '#C63A13',
+    mainFont: '#FEF9F3'
   },
   fonts: {
     main: `'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
@@ -23,5 +25,4 @@ const theme = {
   }
 }
 
-// #99648A
 export default theme

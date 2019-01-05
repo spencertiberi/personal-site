@@ -8,13 +8,13 @@ import {
   University
 } from '../styles'
 
-const EducationEntry = ({ university, children, degree, graduation }) => (
+const EducationEntry = ({ university, children, degree, graduation, alt }) => (
   <Container>
     <Row>
       <University>{university}</University>
-      <Dates>{graduation} </Dates>
+      <Dates alt={alt}>{graduation} </Dates>
     </Row>
-    <Degree>{degree}</Degree>
+    <Degree alt={alt}>{degree}</Degree>
     <Description>{children}</Description>
   </Container>
 )

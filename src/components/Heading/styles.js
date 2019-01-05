@@ -13,6 +13,7 @@ export const Header = styled(Flex)`
   font-size: 4em;
   font-family: ${({ theme }) => theme.fonts.main};
   text-align: center;
+  text-shadow: 3px 3px ${({ theme }) => theme.colors.headerAlt};
 
   @media only screen and (max-width: ${({ theme }) =>
       theme.breakpoints.small.ceiling}) {

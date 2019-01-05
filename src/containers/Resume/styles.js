@@ -9,11 +9,17 @@ export const Container = styled(Flex)`
 export const Entries = styled(Flex)`
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+  width: ${props => (props.alt ? '100vw' : 'auto')};
+  height: auto;
+  background-color: ${props => ({ theme }) =>
+    props.alt ? theme.colors.header : 'inheirit'};
 `
 
 export const Title = styled(Flex)`
   font-size: 2.25em;
-  margin-bottom: 0.25em;
-  color: ${({ theme }) => theme.colors.mainFont};
+  margin: 0.25em;
+  color: ${props => ({ theme }) =>
+    props.alt ? theme.colors.headerAlt : theme.colors.header};
   font-family: ${({ theme }) => theme.fonts.heading};
 `

@@ -77,5 +77,6 @@ export const NavItem = styled(Link)`
   :hover,
   &.active {
     color: ${({ theme }) => theme.colors.header};
+    text-shadow: 1.5px 1.5px ${({ theme }) => theme.colors.headerAlt};
   }
 `
