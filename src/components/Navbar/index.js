@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Container, Desktop, Icon, Logo, Menu, Mobile, NavItem } from './styles'
 import { withRouter } from 'react-router-dom'
-import logo from './st.png'
+import logo from './Signature.png'
 
 class Navbar extends Component {
   constructor(props) {

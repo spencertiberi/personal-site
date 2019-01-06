@@ -8,7 +8,7 @@ class Home extends Component {
   render() {
     return (
       <Container>
-        <Heading scroll> ティベリ </Heading>
+        <Heading scroll> Spencer Tiberi </Heading>
         <MainImage src={backgroundImage} alt="Spencer" />
         <Info />
       </Container>

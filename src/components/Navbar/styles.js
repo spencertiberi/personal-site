@@ -31,9 +31,14 @@ export const Icon = styled(Flex)`
 `
 
 export const Logo = styled.img`
-  width: 10em;
+  width: 18em;
   height: auto;
   margin-top: 1em;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 `
 
 export const Mobile = styled(Flex)`
