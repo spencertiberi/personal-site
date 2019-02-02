@@ -4,7 +4,7 @@ import ProfilePic from './Snowboarding.jpg'
 
 const Info = () => (
   <Container>
-    <Title>About ティベリさん </Title>
+    <Title> {`Hi, I'm Spencer and I make things`} </Title>
     <Paragraph>
       <span>
         <Pic src={ProfilePic} alt="Spencer" />

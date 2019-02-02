@@ -22,7 +22,7 @@ export const Title = styled(Flex)`
   text-shadow: 2px 2px ${({ theme }) => theme.colors.headerAlt};
   background-color: ${({ theme }) => theme.colors.backgroundAlt};
   margin-bottom: 0.25em;
-  z-index: 100;
+  z-index: 150;
   position: sticky;
   top: 0;
 
@@ -54,10 +54,7 @@ export const Pic = styled.img`
 
   @media only screen and (max-width: ${({ theme }) =>
       theme.breakpoints.small.ceiling}) {
-    width: 50vw;
-    margin: 0 0 1em 0;
-    position: relative;
-    top: 0;
+    display: none;
   }
 `
 

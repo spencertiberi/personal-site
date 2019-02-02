@@ -8,6 +8,7 @@ import config from './config'
 import Home from './containers/Home/'
 import About from './containers/About'
 import Resume from './containers/Resume/'
+import Portfolio from './containers/Portfolio'
 import Navbar from './components/Navbar/'
 import Footer from './components/Footer'
 
@@ -39,7 +40,7 @@ class App extends Component {
               <Switch>
                 <View path="/about" component={About} />
                 <View path="/resume" component={Resume} />
-                <View path="/portfolio" component={Resume} />
+                <View path="/portfolio" component={Portfolio} />
                 <View path="/" component={Home} />
               </Switch>
             </div>

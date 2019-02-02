@@ -8,12 +8,13 @@ export const Container = styled(Flex)`
   justify-content: center;
   position: ${props => (props.scroll ? 'sticky' : 'relative')};
   top: ${props => (props.scroll ? '1em' : '0')};
-  z-index: 100;
+  z-index: 50;
 
   @media only screen and (max-width: ${({ theme }) =>
       theme.breakpoints.small.ceiling}) {
     position: relative;
     top: 0;
+    height: 4.5em;
   }
 `
 

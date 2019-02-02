@@ -7,7 +7,7 @@ class About extends Component {
   render() {
     return (
       <Container>
-        <Heading> About ティベリさん </Heading>
+        <Heading> About Me </Heading>
         <Bio>
           <span>
             <Pic src={ProfilePic} alt="Spencer" />
