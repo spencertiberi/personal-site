@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Container, Desktop, Icon, Logo, Menu, Mobile, NavItem } from './styles'
 import { withRouter } from 'react-router-dom'
 import logo from './Signature.png'
+import LazyLoad from 'react-lazy-load'
 
 class Navbar extends Component {
   constructor(props) {
@@ -14,7 +15,9 @@ class Navbar extends Component {
     return (
       <React.Fragment>
         <Container>
-          <Logo src={logo} alt="Spencer Tiberi Logo" />
+          <LazyLoad height={150}>
+            <Logo src={logo} alt="Spencer Tiberi Logo" />
+          </LazyLoad>
           <Desktop>
             <NavItem
               to="/"
@@ -23,28 +26,12 @@ class Navbar extends Component {
               Home
             </NavItem>
             <NavItem
-              to="/about"
-              className={
-                this.props.location.pathname === '/about' ? 'active' : ''
-              }
-            >
-              About
-            </NavItem>
-            <NavItem
               to="/resume"
               className={
                 this.props.location.pathname === '/resume' ? 'active' : ''
               }
             >
               Resume
-            </NavItem>
-            <NavItem
-              to="/portfolio"
-              className={
-                this.props.location.pathname === '/portfolio' ? 'active' : ''
-              }
-            >
-              Portfolio
             </NavItem>
           </Desktop>
         </Container>
