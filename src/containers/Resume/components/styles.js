@@ -25,7 +25,7 @@ export const Container = styled(Flex)`
   justify-content: center;
   font-family: ${({ theme }) => theme.fonts.main};
   color: ${({ theme }) => theme.colors.mainFont};
-  padding-bottom: 2em;
+  padding-bottom: 0.5em;
 
   @media only screen and (max-width: ${({ theme }) =>
       theme.breakpoints.middle.ceiling}) {

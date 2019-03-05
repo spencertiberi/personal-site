@@ -13,7 +13,7 @@ const theme = {
   },
   colors: {
     background: '#EE6D48',
-    backgroundAlt: '#98C988',
+    backgroundAlt: '#EE6D48',
     header: '#FDBE6A',
     headerAlt: '#C63A13',
     mainFont: '#FEF9F3'
