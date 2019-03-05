@@ -16,18 +16,35 @@ class Resume extends Component {
             start="July 2018"
             company="Harvard University"
             alt
-          >
-            {`I used to teach computer science at this school. I also worked in the robots lab. It was cool times, bruh. What say you? I think you have had some cool experiences too! I bet you have. Damn, you're so cool! I now build stuff and help others build stuff in useful ways.`}
-          </JobEntry>
+          />
+          <JobEntry
+            title="Teaching Fellow"
+            start="August 2017"
+            end="December 2018"
+            company="Harvard University"
+            alt
+          />
           <JobEntry
             title="Computer Science Faculty"
             start="August 2017"
             end="July 2018"
             company="Belmont Hill School"
             alt
-          >
-            {`I used to teach computer science at this school. I also worked in the robots lab. It was cool times, bruh. What say you? I think you have had some cool experiences too! I bet you have. Damn, you're so cool! I now build stuff and help others build stuff in useful ways.`}
-          </JobEntry>
+          />
+          <JobEntry
+            title="CS50 Summer Fellow"
+            start="June 2017"
+            end="August 2017"
+            company="Harvard University"
+            alt
+          />
+          <JobEntry
+            title="Math and Computer Science Teacher"
+            start="August 2013"
+            end="July 2017"
+            company="Clark County School District"
+            alt
+          />
         </Entries>
         <Entries>
           <Title>Education</Title>
@@ -35,16 +52,12 @@ class Resume extends Component {
             university="Harvard University"
             graduation="May 2017"
             degree="Masters of Liberal Arts (A.L.M.)"
-          >
-            {`I used to teach computer science at this school. I also worked in the robots lab. It was cool times, bruh. What say you? I think you have had some cool experiences too! I bet you have. Damn, you're so cool! I now build stuff and help others build stuff in useful ways.`}
-          </EducationEntry>
+          />
           <EducationEntry
             university="University of Nevada, Las Vegas"
             graduation="May 2013"
             degree="Bachelors of Science (B.S.)"
-          >
-            {`I used to teach computer science at this school. I also worked in the robots lab. It was cool times, bruh. What say you? I think you have had some cool experiences too! I bet you have. Damn, you're so cool! I now build stuff and help others build stuff in useful ways.`}
-          </EducationEntry>
+          />
         </Entries>
       </Container>
     )
