@@ -7,9 +7,15 @@ export const Container = styled(Flex)`
   position: relative;
 `
 
+export const ImageWrapper = styled(Flex)`
+  position: relative;
+  min-height: 60vw;
+  width: 100vw;
+  overflow: hidden;
+`
+
 export const MainImage = styled.img`
-  position: sticky;
-  top: 0;
+  position: absolute;
   z-index: -100;
   width: 100vw;
   height: auto;
