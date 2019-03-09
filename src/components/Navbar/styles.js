@@ -77,7 +77,7 @@ export const Menu = styled(Flex)`
 
 export const NavItem = styled(Link)`
   font-size: 1.5em;
-  margin: 0 0.5em 0 0.5em;
+  margin: 0 0.6em 0 0.6em;
   text-decoration: none;
   font-family: ${({ theme }) => theme.fonts.main};
   color: ${({ theme }) => theme.colors.mainFont};

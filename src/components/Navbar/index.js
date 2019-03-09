@@ -33,6 +33,16 @@ class Navbar extends Component {
             >
               Resume
             </NavItem>
+            <NavItem
+              to="/formerstrangers"
+              className={
+                this.props.location.pathname === '/formerstrangers'
+                  ? 'active'
+                  : ''
+              }
+            >
+              Former Strangers
+            </NavItem>
           </Desktop>
         </Container>
         <Mobile>
@@ -41,9 +51,8 @@ class Navbar extends Component {
             <React.Fragment>
               <Menu>
                 <NavItem to="/">Home</NavItem>
-                <NavItem to="/about">About</NavItem>
                 <NavItem to="/resume">Resume</NavItem>
-                <NavItem to="/portfolio">Portfolio</NavItem>
+                <NavItem to="/selfieproject">Former Strangers</NavItem>
               </Menu>
               <Icon onClick={() => this.setState({ menuVisable: false })}>
                 &#10005;
