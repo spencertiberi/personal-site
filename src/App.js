@@ -6,9 +6,8 @@ import { ThemeProvider } from 'styled-components'
 import theme from './theme'
 import config from './config'
 import Home from './containers/Home/'
-import About from './containers/About'
 import Resume from './containers/Resume/'
-import Portfolio from './containers/Portfolio'
+import Selfie from './containers/SelfieProject'
 import Navbar from './components/Navbar/'
 import Footer from './components/Footer'
 
@@ -38,9 +37,8 @@ class App extends Component {
           <ApolloProvider client={client}>
             <div className="App">
               <Switch>
-                <View path="/about" component={About} />
                 <View path="/resume" component={Resume} />
-                <View path="/portfolio" component={Portfolio} />
+                <View path="/formerstrangers" component={Selfie} />
                 <View path="/" component={Home} />
               </Switch>
             </div>
