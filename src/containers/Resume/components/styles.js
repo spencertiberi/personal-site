@@ -12,6 +12,7 @@ export const Company = styled(Flex)`
   @media only screen and (max-width: ${({ theme }) =>
       theme.breakpoints.small.ceiling}) {
     font-size: 1em;
+    padding: 0;
   }
 `
 
@@ -47,6 +48,8 @@ export const Dates = styled(Flex)`
   @media only screen and (max-width: ${({ theme }) =>
       theme.breakpoints.small.ceiling}) {
     font-size: 0.67em;
+    margin-top: 0.33em;
+    align-self: flex-start;
   }
 `
 
@@ -70,16 +73,24 @@ export const Row = styled(Flex)`
   height: auto;
   padding: 0.25em 0em 0.25em 0em;
   justify-content: space-between;
+
+  @media only screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.small.ceiling}) {
+    flex-direction: column;
+  }
 `
 
 export const Title = styled(Flex)`
   font-size: 1.5em;
   align-self: flex-end;
   color: ${({ theme }) => theme.colors.mainFont};
+  max-width: 50vw;
 
   @media only screen and (max-width: ${({ theme }) =>
       theme.breakpoints.small.ceiling}) {
     font-size: 1.33em;
+    align-self: flex-start;
+    max-width: 80vw;
   }
 `
 
