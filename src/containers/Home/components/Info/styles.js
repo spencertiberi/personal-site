@@ -27,8 +27,14 @@ export const Title = styled(Flex)`
   top: 0;
 
   @media only screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.middle.ceiling}) {
+    font-size: 2.25em;
+  }
+
+  @media only screen and (max-width: ${({ theme }) =>
       theme.breakpoints.small.ceiling}) {
     position: relative;
+    font-size: 2em;
   }
 `
 

@@ -26,7 +26,12 @@ export const Header = styled(Flex)`
   text-shadow: 3px 3px ${({ theme }) => theme.colors.headerAlt};
 
   @media only screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.middle.ceiling}) {
+    font-size: 3.25em;
+  }
+
+  @media only screen and (max-width: ${({ theme }) =>
       theme.breakpoints.small.ceiling}) {
-    font-size: 3em;
+    font-size: 2.5em;
   }
 `
