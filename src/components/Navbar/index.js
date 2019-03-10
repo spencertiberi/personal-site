@@ -52,7 +52,7 @@ class Navbar extends Component {
               <Menu>
                 <NavItem to="/">Home</NavItem>
                 <NavItem to="/resume">Resume</NavItem>
-                <NavItem to="/selfieproject">Former Strangers</NavItem>
+                <NavItem to="/formerstrangers">Former Strangers</NavItem>
               </Menu>
               <Icon onClick={() => this.setState({ menuVisable: false })}>
                 &#10005;
