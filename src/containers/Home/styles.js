@@ -12,6 +12,10 @@ export const ImageWrapper = styled(Flex)`
   min-height: 60vw;
   width: 100vw;
   overflow: hidden;
+  @media only screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.small.ceiling}) {
+    height: 70vw;
+  }
 `
 
 export const MainImage = styled.img`

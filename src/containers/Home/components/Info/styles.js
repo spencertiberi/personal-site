@@ -4,7 +4,7 @@ import { Flex } from 'grid-styled'
 export const Container = styled(Flex)`
   width: 100vw;
   height: auto;
-  z-index: 100;
+  z-index: 200;
   flex-direction: column;
   font-family: ${({ theme }) => theme.fonts.main};
   background-color: ${({ theme }) => theme.colors.header};
@@ -22,7 +22,7 @@ export const Title = styled(Flex)`
   text-shadow: 2px 2px ${({ theme }) => theme.colors.backgroundAlt};
   background-color: ${({ theme }) => theme.colors.header};
   margin-bottom: 0.25em;
-  z-index: 150;
+  z-index: 250;
   position: sticky;
   top: 0;
 
