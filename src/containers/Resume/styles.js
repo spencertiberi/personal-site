@@ -10,10 +10,10 @@ export const Entries = styled(Flex)`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: ${props => (props.alt ? '100vw' : 'auto')};
+  width: 100vw;
   height: auto;
   background-color: ${props => ({ theme }) =>
-    props.alt ? theme.colors.header : 'inheirit'};
+    props.alt ? theme.colors.header : theme.colors.background};
 `
 
 export const Title = styled(Flex)`

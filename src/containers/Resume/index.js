@@ -9,41 +9,41 @@ class Resume extends Component {
     return (
       <Container>
         <Heading> {`Stuff I've Done`} </Heading>
-        <Entries alt>
-          <Title alt>Experience</Title>
+        <Entries alt="true">
+          <Title alt="true">Experience</Title>
           <JobEntry
             title="Engineering Manager"
             start="July 2018"
             company="Harvard University"
-            alt
+            alt="true"
           />
           <JobEntry
             title="Teaching Fellow"
             start="August 2017"
             end="December 2018"
             company="Harvard University"
-            alt
+            alt="true"
           />
           <JobEntry
             title="Computer Science Faculty"
             start="August 2017"
             end="July 2018"
             company="Belmont Hill School"
-            alt
+            alt="true"
           />
           <JobEntry
             title="CS50 Summer Fellow"
             start="June 2017"
             end="August 2017"
             company="Harvard University"
-            alt
+            alt="true"
           />
           <JobEntry
             title="Math and Computer Science Teacher"
             start="August 2013"
             end="July 2017"
             company="Clark County School District"
-            alt
+            alt="true"
           />
         </Entries>
         <Entries>

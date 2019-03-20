@@ -27,6 +27,8 @@ export const Container = styled(Flex)`
   font-family: ${({ theme }) => theme.fonts.main};
   color: ${({ theme }) => theme.colors.mainFont};
   padding-bottom: 0.5em;
+  background-color: ${props => ({ theme }) =>
+    props.alt ? theme.colors.header : theme.colors.background};
 
   @media only screen and (max-width: ${({ theme }) =>
       theme.breakpoints.middle.ceiling}) {
