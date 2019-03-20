@@ -45,6 +45,7 @@ export const Mobile = styled(Flex)`
   display: none;
   flex-direction: column;
   align-items: center;
+  background-color: ${({ theme }) => theme.colors.background};
 
   @media only screen and (max-width: ${({ theme }) =>
       theme.breakpoints.small.ceiling}) {

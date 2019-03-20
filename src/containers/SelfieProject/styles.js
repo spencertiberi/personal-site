@@ -4,6 +4,7 @@ import { Flex } from 'grid-styled'
 export const Container = styled(Flex)`
   flex-direction: column;
   align-items: center;
+  background-color: ${({ theme }) => theme.colors.background};
 `
 
 export const Image = styled.img`

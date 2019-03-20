@@ -7,8 +7,10 @@ export const Container = styled(Flex)`
   align-items: center;
   justify-content: center;
   position: ${props => (props.scroll ? 'sticky' : 'relative')};
-  top: ${props => (props.scroll ? '1em' : '0')};
+  top: 0;
   z-index: 50;
+  width: 100vw;
+  background-color: ${({ theme }) => theme.colors.background};
 
   @media only screen and (max-width: ${({ theme }) =>
       theme.breakpoints.small.ceiling}) {
