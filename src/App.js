@@ -3,7 +3,7 @@ import ApolloClient from 'apollo-boost'
 import { ApolloProvider } from 'react-apollo'
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
-import theme from './theme'
+import { dayTheme, nightTheme } from './theme'
 import config from './config'
 import Home from './containers/Home/'
 import Resume from './containers/Resume/'
@@ -31,9 +31,12 @@ const View = ({ component: MainComponent, purple, path, ...rest }) => (
 
 class App extends Component {
   render() {
+    const today = new Date()
+    const time = today.getHours()
+    const isDay = time > 7 && time < 19
     return (
       <Router>
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={isDay ? dayTheme : nightTheme}>
           <ApolloProvider client={client}>
             <div className="App">
               <Switch>
