@@ -40,7 +40,7 @@ export const nightTheme = {
     background: '#7566a0',
     backgroundAlt: '#7566a0',
     header: '#43384C',
-    headerAlt: '#ffb7c5',
+    headerAlt: '#c397c4',
     mainFont: '#CDD1E6'
   },
   fonts: {
