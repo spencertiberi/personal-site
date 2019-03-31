@@ -62,7 +62,7 @@ class Instagram extends Component {
             <Text
               onClick={() => {
                 this.onLinkClick(
-                  'https://www.instagram.com/uber.ed.baker/?hl=en'
+                  'https://www.instagram.com/former_strangers/?hl=en'
                 )
               }}
             >
