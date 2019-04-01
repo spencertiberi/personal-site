@@ -1,29 +1,12 @@
 import React from 'react'
-import {
-  Post,
-  Caption,
-  CountersContainer,
-  Counters,
-  Image,
-  Icon
-} from './styles'
-import Heart from './assets/heart.png'
-import Comment from './assets/comment.png'
+import { Post, Caption, Image } from './styles'
 
-const Tile = ({ image, caption, likes, comments, link }) => (
+const Tile = ({ image, caption, link }) => (
   <Post onClick={() => window.open(link)}>
     <Image src={image} alt="photo2" />
-    <Caption>{`${caption.substring(0, 45)}...`}</Caption>
-    <CountersContainer>
-      <Counters>
-        <Icon src={Heart} />
-        <div>{likes}</div>
-      </Counters>
-      <Counters>
-        <Icon src={Comment} />
-        <div>{comments}</div>
-      </Counters>
-    </CountersContainer>
+    <Caption>
+      {caption.length > 100 ? `${caption.substring(0, 70)}...` : caption}
+    </Caption>
   </Post>
 )
 
