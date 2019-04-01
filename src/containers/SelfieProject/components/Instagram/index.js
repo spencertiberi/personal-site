@@ -8,7 +8,8 @@ class Instagram extends Component {
     super(props)
 
     this.state = {
-      posts: []
+      posts: [],
+      loading: true
     }
   }
 
@@ -17,7 +18,8 @@ class Instagram extends Component {
       .then(response => response.json())
       .then(data => {
         this.setState({
-          posts: data.data
+          posts: data.data,
+          loading: false
         })
       })
       .catch(error => {
@@ -38,18 +40,22 @@ class Instagram extends Component {
             @former_strangers
           </Title>
           <InstagramContainer>
-            {posts.map(item => {
-              const { comments, caption, images, link, likes } = item
-              return (
-                <Tile
-                  image={images.standard_resolution.url}
-                  caption={caption.text}
-                  comments={comments.count}
-                  link={link}
-                  likes={likes.count}
-                />
-              )
-            })}
+            {!this.state.loading ? (
+              posts.map(item => {
+                const { comments, caption, images, link, likes } = item
+                return (
+                  <Tile
+                    image={images.standard_resolution.url}
+                    caption={caption.text}
+                    comments={comments.count}
+                    link={link}
+                    likes={likes.count}
+                  />
+                )
+              })
+            ) : (
+              <Title>Loading Instagram Feed...</Title>
+            )}
           </InstagramContainer>
         </OuterContainer>
       </Wrapper>
