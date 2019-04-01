@@ -2,20 +2,17 @@ import styled from 'styled-components'
 import { Flex } from 'grid-styled'
 
 export const InstagramContainer = styled(Flex)`
-  background-color: #24212a;
   flex-direction: row;
-  width: 908px;
-  height: 1099px;
-  align-self: flex-start;
-  padding: 35px;
-  display: grid;
-  margin-bottom: 2%;
-  grid-template-columns: repeat(3, 290px);
+  width: 100vw;
+  max-width: 1099px;
+  height: auto;
+  padding: 2vw 3vw 0 3vw;
+  justify-content: space-around;
+  flex-wrap: wrap;
   @media only screen and (max-width: ${({ theme }) =>
-      theme.breakpoints.mobile.floor}) {
-    background-color: transparent;
+      theme.breakpoints.middle.floor}) {
     width: 100%;
-    height: 376px;
+    height: auto;
     grid-template-columns: repeat(3, 130px);
     padding: 0px;
     margin-top: 20px;
@@ -38,70 +35,55 @@ export const ViewAll = styled(Flex)`
 
 export const Text = styled.h1`
   color: ${({ theme }) => theme.colors.primary};
-  font-family: ${({ theme }) => theme.fonts.body.family};
+  font-family: ${({ theme }) => theme.fonts.main};
   font-size: 24px;
   margin-top: 2%;
   cursor: pointer;
   @media only screen and (max-width: ${({ theme }) =>
-      theme.breakpoints.mobile.floor}) {
+      theme.breakpoints.middle.floor}) {
     font-size: 14px;
   }
 `
 
 export const OuterContainer = styled(Flex)`
   flex-direction: column;
-  width: 908px;
-  height: 1100px;
-  align-self: flex-end;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: auto;
   @media only screen and (max-width: ${({ theme }) =>
-      theme.breakpoints.mobile.floor}) {
+      theme.breakpoints.middle.floor}) {
     background-color: transparent;
     width: 390px;
-    height: 390px;
+    height: auto;
     padding: 0px;
   }
 `
 
 export const Title = styled(Flex)`
-  font-size: 36px;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  color: #f2f2f2;
-  font-family: ${({ theme }) => theme.fonts.body.family};
-  font-weight: bold;
-  margin-top: 80px;
-  align-self: center;
-  text-shadow: 1px 1px ${({ theme }) => theme.colors.primary};
+  font-size: 1.5em;
+  text-decoration: none;
+  font-family: ${({ theme }) => theme.fonts.main};
+  color: ${({ theme }) => theme.colors.header};
   @media only screen and (min-width: ${({ theme }) =>
-      theme.breakpoints.mobile.floor}) {
-    transform: rotate(-90deg);
-    font-size: 48px;
+      theme.breakpoints.middle.floor}) {
+    font-size: 2.5em;
     margin-bottom: 0px;
   }
 `
 
 export const Wrapper = styled(Flex)`
-  width: 100%;
+  width: 100vw;
   flex-direction: column;
   align-self: center;
-  margin-top: 20%;
-  margin-left: 10px;
-  margin-right: 10px;
-  @media only screen and (min-width: ${({ theme }) =>
-      theme.breakpoints.mobile.floor}) {
-    margin-left: 30px;
-    margin-bottom: 60px;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-self: flex-end;
-  }
+  align-items: center;
 `
 export const ArrowImg = styled.img`
   width: 31px;
   height: 14px;
   padding-left: 2%;
   @media only screen and (max-width: ${({ theme }) =>
-      theme.breakpoints.mobile.ceiling}) {
+      theme.breakpoints.middle.ceiling}) {
     height: 14px;
     width: auto;
     align-self: right;

@@ -1,16 +1,7 @@
 import React, { Component } from 'react'
-import {
-  InstagramContainer,
-  Title,
-  Wrapper,
-  OuterContainer,
-  ViewAll,
-  ArrowImg,
-  Text
-} from './styles'
+import { InstagramContainer, Wrapper, OuterContainer, Title } from './styles'
 import Tile from './components/Tile'
-import config from '../../config'
-import Arrow from './Arrow.png'
+import config from './config'
 
 class Instagram extends Component {
   constructor(props) {
@@ -42,8 +33,10 @@ class Instagram extends Component {
     const { instagramRef } = this.props
     return (
       <Wrapper ref={instagramRef}>
-        <Title>Gallery</Title>
         <OuterContainer>
+          <Title as="a" href="https://www.instagram.com/former_strangers/">
+            @former_strangers
+          </Title>
           <InstagramContainer>
             {posts.map(item => {
               const { comments, caption, images, link, likes } = item
@@ -58,19 +51,6 @@ class Instagram extends Component {
               )
             })}
           </InstagramContainer>
-          <ViewAll>
-            <Text
-              onClick={() => {
-                this.onLinkClick(
-                  'https://www.instagram.com/former_strangers/?hl=en'
-                )
-              }}
-            >
-              VIEW ALL ON INSTAGRAM
-            </Text>
-
-            <ArrowImg src={Arrow} />
-          </ViewAll>
         </OuterContainer>
       </Wrapper>
     )

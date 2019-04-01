@@ -31,4 +31,5 @@ export const Text = styled(Flex)`
   color: ${({ theme }) => theme.colors.mainFont};
   margin: 1em;
   text-align: justify;
+  text-align: center;
 `
