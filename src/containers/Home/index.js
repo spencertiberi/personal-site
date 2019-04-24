@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import Heading from '../../components/Heading'
 import { Container, ImageWrapper, MainImage } from './styles'
-import dayImage from './TeaTime.jpg'
-import nightImage from './night.jpg'
+import dayImage from './assets/teaTime.jpg'
+import nightImage from './assets/night.jpg'
 import Info from './components/Info'
+import Contact from './components/Contact'
 
 class Home extends Component {
   time = () => {
@@ -19,6 +20,7 @@ class Home extends Component {
           <MainImage src={this.time() ? dayImage : nightImage} alt="Spencer" />
         </ImageWrapper>
         <Info />
+        <Contact />
       </Container>
     )
   }

@@ -9,13 +9,13 @@ import {
 } from '../styles'
 
 const EducationEntry = ({ university, children, degree, graduation, alt }) => (
-  <Container>
+  <Container alt={alt}>
     <Row>
       <University>{university}</University>
       <Dates alt={alt}>{graduation} </Dates>
     </Row>
     <Degree alt={alt}>{degree}</Degree>
-    <Description>{children}</Description>
+    <Description alt={alt}>{children}</Description>
   </Container>
 )
 

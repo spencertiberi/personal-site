@@ -61,7 +61,8 @@ export const Description = styled(Flex)`
   font-size: 1em;
   padding: 0.5em 0 0.5em 0;
   text-align: justify;
-  color: ${({ theme }) => theme.colors.mainFont};
+  color: ${props => ({ theme }) =>
+    props.alt ? theme.colors.background : theme.colors.headerAlt};
 
   @media only screen and (max-width: ${({ theme }) =>
       theme.breakpoints.small.ceiling}) {
