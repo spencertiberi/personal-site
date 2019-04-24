@@ -39,7 +39,6 @@ export const Title = styled(Flex)`
 `
 
 export const Paragraph = styled(Flex)`
-  font-size: 1em;
   color: ${({ theme }) => theme.colors.mainFont};
 
   @media only screen and (max-width: ${({ theme }) =>
@@ -64,8 +63,9 @@ export const Pic = styled.img`
   }
 `
 
-export const Text = styled.p`
-  font-size: 1em;
+export const Text = styled(Flex)`
+  font-size: 1.2em;
+  letter-spacing: 0.05em;
   font-family: ${({ theme }) => theme.fonts.main};
   color: ${({ theme }) => theme.colors.mainFont};
   margin: 0 0 1em 0;
