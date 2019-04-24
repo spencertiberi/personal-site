@@ -8,7 +8,7 @@ const ResumeEntry = ({ title, children, company, start, end, alt }) => (
       <Dates alt={alt}>{`${start} ~ ${end || 'Present'}`} </Dates>
     </Row>
     <Company alt={alt}>{company}</Company>
-    <Description>{children}</Description>
+    <Description alt={alt}>{children}</Description>
   </Container>
 )
 
