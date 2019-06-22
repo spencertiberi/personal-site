@@ -7,7 +7,7 @@ const Container = styled(Flex)`
   align-items: center;
   justify-content: space-around;
   font-family: ${({ theme }) => theme.fonts.main};
-  color: ${({ theme }) => theme.colors.headerAlt};
+  color: ${({ theme }) => theme.colors.header};
   background-color: ${({ theme }) => theme.colors.background};
 `
 
