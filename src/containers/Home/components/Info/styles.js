@@ -19,7 +19,6 @@ export const Container = styled(Flex)`
 export const Title = styled(Flex)`
   font-size: 3em;
   color: ${({ theme }) => theme.colors.headerAlt};
-  text-shadow: 2px 2px ${({ theme }) => theme.colors.backgroundAlt};
   background-color: ${({ theme }) => theme.colors.header};
   margin-bottom: 0.25em;
   z-index: 250;
