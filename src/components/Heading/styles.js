@@ -2,28 +2,33 @@ import styled from 'styled-components'
 import { Flex } from 'grid-styled'
 
 export const Container = styled(Flex)`
-  height: 6em;
+  height: 4em;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: ${props => (props.scroll ? 'sticky' : 'relative')};
+  z-index: 5;
   top: 0;
-  z-index: 50;
   width: 100vw;
-  background-color: ${({ theme }) => theme.colors.background};
+  background-color: ${props =>
+    props.scroll ? ({ theme }) => theme.colors.background : 'trasparent'};
+  margin-top: -2.5em;
 
   @media only screen and (max-width: ${({ theme }) =>
       theme.breakpoints.small.ceiling}) {
-    position: relative;
-    top: 0;
-    height: 4.5em;
+    margin-top: 0;
+  }
+
+  @media only screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.headerStyle.ceiling}) {
+    margin-top: -1.5em;
   }
 `
 
 export const Header = styled(Flex)`
   color: ${({ theme }) => theme.colors.header};
   font-size: 4em;
-  font-family: ${({ theme }) => theme.fonts.main};
+  font-family: ${({ theme }) => theme.fonts.heading};
   text-align: center;
   text-shadow: 3px 3px ${({ theme }) => theme.colors.headerAlt};
 
