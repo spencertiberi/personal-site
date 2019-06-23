@@ -62,7 +62,7 @@ export const Description = styled(Flex)`
   padding: 0.5em 0 0.5em 0;
   text-align: justify;
   color: ${props => ({ theme }) =>
-    props.alt ? theme.colors.background : theme.colors.headerAlt};
+    props.alt ? theme.colors.background : theme.colors.backgroundAlt};
 
   @media only screen and (max-width: ${({ theme }) =>
       theme.breakpoints.small.ceiling}) {
@@ -84,9 +84,11 @@ export const Row = styled(Flex)`
 `
 
 export const Title = styled(Flex)`
+  font-family: ${({ theme }) => theme.fonts.heading};
   font-size: 1.5em;
   align-self: flex-end;
-  color: ${({ theme }) => theme.colors.mainFont};
+  color: ${props => ({ theme }) =>
+    props.alt ? theme.colors.mainFont : theme.colors.mainAlt};
   max-width: 50vw;
 
   @media only screen and (max-width: ${({ theme }) =>

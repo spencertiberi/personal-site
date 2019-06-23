@@ -1,8 +1,18 @@
 import React, { Component } from 'react'
-import { Container, Desktop, Icon, Logo, Menu, Mobile, NavItem } from './styles'
+import {
+  Container,
+  Desktop,
+  Icon,
+  Logo,
+  Menu,
+  Mobile,
+  NavItem,
+  Image,
+  NavItems
+} from './styles'
 import { withRouter } from 'react-router-dom'
 import logo from './Signature.png'
-import LazyLoad from 'react-lazy-load'
+import ellie from './elliedrawing.jpg'
 
 class Navbar extends Component {
   constructor(props) {
@@ -15,34 +25,35 @@ class Navbar extends Component {
     return (
       <React.Fragment>
         <Container>
-          <LazyLoad height={150}>
-            <Logo src={logo} alt="Spencer Tiberi Logo" />
-          </LazyLoad>
           <Desktop>
-            <NavItem
-              to="/"
-              className={this.props.location.pathname === '/' ? 'active' : ''}
-            >
-              Home
-            </NavItem>
-            <NavItem
-              to="/resume"
-              className={
-                this.props.location.pathname === '/resume' ? 'active' : ''
-              }
-            >
-              Resume
-            </NavItem>
-            <NavItem
-              to="/formerstrangers"
-              className={
-                this.props.location.pathname === '/formerstrangers'
-                  ? 'active'
-                  : ''
-              }
-            >
-              Former Strangers
-            </NavItem>
+            <Image src={ellie} alt="Spencer" />
+            <Logo src={logo} alt="Spencer Tiberi Logo" />
+            <NavItems>
+              <NavItem
+                to="/"
+                className={this.props.location.pathname === '/' ? 'active' : ''}
+              >
+                Home
+              </NavItem>
+              <NavItem
+                to="/resume"
+                className={
+                  this.props.location.pathname === '/resume' ? 'active' : ''
+                }
+              >
+                Resume
+              </NavItem>
+              <NavItem
+                to="/formerstrangers"
+                className={
+                  this.props.location.pathname === '/formerstrangers'
+                    ? 'active'
+                    : ''
+                }
+              >
+                Former Strangers
+              </NavItem>
+            </NavItems>
           </Desktop>
         </Container>
         <Mobile>

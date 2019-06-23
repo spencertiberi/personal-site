@@ -11,7 +11,7 @@ import {
 const EducationEntry = ({ university, children, degree, graduation, alt }) => (
   <Container alt={alt}>
     <Row>
-      <University>{university}</University>
+      <University alt={alt}>{university}</University>
       <Dates alt={alt}>{graduation} </Dates>
     </Row>
     <Degree alt={alt}>{degree}</Degree>

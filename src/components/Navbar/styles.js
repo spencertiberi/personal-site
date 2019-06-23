@@ -15,30 +15,83 @@ export const Container = styled(Flex)`
   }
 `
 
-export const Desktop = styled(Flex)`
-  height: 2.5em;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-`
-
-export const Icon = styled(Flex)`
-  font-size: 2.5em;
-  color: ${({ theme }) => theme.colors.mainFont};
+export const Image = styled.img`
   position: absolute;
-  top: 0.25em;
-  right: 0.25em;
-`
-
-export const Logo = styled.img`
-  width: 18em;
-  height: auto;
-  margin-top: 1em;
+  z-index: 50;
+  width: auto;
+  height: 10em;
+  left: 1vw;
+  top: 1vw;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-drag: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+
+  @media only screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.headerStyle.ceiling}) {
+    display: none;
+  }
+`
+
+export const NavItems = styled(Flex)`
+  width: 100vw;
+  justify-content: flex-end;
+  flex-direction: row;
+  z-index: 50;
+
+  @media only screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.headerStyle.ceiling}) {
+    justify-content: center;
+  }
+`
+
+export const Desktop = styled(Flex)`
+  height: 11em;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  @media only screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.headerStyle.ceiling}) {
+    flex-direction: column;
+  }
+`
+
+export const Icon = styled(Flex)`
+  font-size: 2.5em;
+  color: ${({ theme }) => theme.colors.header};
+  position: absolute;
+  top: 0.25em;
+  right: 0.25em;
+  z-index: 2;
+`
+
+export const Logo = styled.img`
+  position: absolute;
+  width: 14em;
+  height: auto;
+  left: 8em;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  z-index: 50;
+
+  @media only screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.headerStyle.ceiling}) {
+    position: relative;
+    left: 0;
+  }
+
+  @media only screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.small.ceiling}) {
+    width: 14em;
+    height: auto;
+    margin-bottom: 0.7em;
+  }
 `
 
 export const Mobile = styled(Flex)`
@@ -60,6 +113,7 @@ export const Menu = styled(Flex)`
   height: auto;
   padding: 1em;
   background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
 
   @keyframes fadeIn {
     from {
@@ -77,14 +131,29 @@ export const Menu = styled(Flex)`
 `
 
 export const NavItem = styled(Link)`
-  font-size: 1.5em;
+  font-size: 2em;
   margin: 0 0.6em 0 0.6em;
   text-decoration: none;
   font-family: ${({ theme }) => theme.fonts.main};
-  color: ${({ theme }) => theme.colors.mainFont};
+  color: ${({ theme }) => theme.colors.header};
+  z-index: 2;
   :hover,
   &.active {
     color: ${({ theme }) => theme.colors.header};
     text-shadow: 1.5px 1.5px ${({ theme }) => theme.colors.headerAlt};
+    text-decoration: underline;
+    text-decoration-color: ${({ theme }) => theme.colors.mainAlt};
+  }
+
+  @media only screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.small.ceiling}) {
+    color: ${({ theme }) => theme.colors.headerAlt};
+    :hover,
+    &.active {
+      color: ${({ theme }) => theme.colors.mainFont};
+      text-shadow: none;
+      text-decoration: none;
+      text-decoration-color: ${({ theme }) => theme.colors.mainAlt};
+    }
   }
 `
