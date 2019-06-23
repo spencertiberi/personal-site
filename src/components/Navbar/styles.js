@@ -61,6 +61,7 @@ export const Desktop = styled(Flex)`
       theme.breakpoints.headerStyle.ceiling}) {
     flex-direction: column;
     justify-content: center;
+    padding: 0;
   }
 `
 
