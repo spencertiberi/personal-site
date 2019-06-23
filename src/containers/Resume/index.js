@@ -9,23 +9,22 @@ class Resume extends Component {
     return (
       <Container>
         <Heading> {`Stuff I've Done`} </Heading>
-        <Entries alt="true">
-          <Title alt="true">Experience</Title>
+        <Entries>
+          <Title>Experience</Title>
           <JobEntry
             title="Engineering Manager"
             start="July 2018"
             company="Harvard University"
-            alt="true"
           >
             I manage HSA DEV, a student-run web and app design and development
             company
           </JobEntry>
           <JobEntry
+            alt="true"
             title="Teaching Fellow"
             start="August 2017"
             end="December 2018"
             company="Harvard University"
-            alt="true"
           >
             {`I taught CS50, Harvard's introduction to comupter science course`}
           </JobEntry>
@@ -34,17 +33,16 @@ class Resume extends Component {
             start="August 2017"
             end="July 2018"
             company="Belmont Hill School"
-            alt="true"
           >
             I taught CS50 as an AP course, robotics, intro to Python, and sports
             analytics
           </JobEntry>
           <JobEntry
+            alt="true"
             title="CS50 Summer Fellow"
             start="June 2017"
             end="August 2017"
             company="Harvard University"
-            alt="true"
           >
             I developed curriculum for CS50 AP, the high school adaptation of
             CS50
@@ -54,15 +52,15 @@ class Resume extends Component {
             start="August 2013"
             end="July 2017"
             company="Clark County School District"
-            alt="true"
           >
             I taught Algebra II Honors (affectionately known by students as A2H)
             and CS50 AP
           </JobEntry>
         </Entries>
-        <Entries>
-          <Title>Education</Title>
+        <Entries alt="true">
+          <Title alt="true">Education</Title>
           <EducationEntry
+            alt="true"
             university="Harvard University"
             graduation="May 2017"
             degree="Masters of Liberal Arts (A.L.M.)"
