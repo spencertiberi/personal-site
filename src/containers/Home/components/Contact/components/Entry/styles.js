@@ -7,7 +7,7 @@ export const Container = styled(Flex)`
   font-size: 1.2em;
   letter-spacing: 0.05em;
   font-family: ${({ theme }) => theme.fonts.main};
-  color: ${({ theme }) => theme.colors.mainAlt};
+  color: ${({ theme }) => theme.colors.backgroundAlt};
   width: auto;
   @media only screen and (max-width: ${({ theme }) =>
       theme.breakpoints.middle.ceiling}) {
