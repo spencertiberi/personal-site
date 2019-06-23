@@ -16,12 +16,9 @@ export const Container = styled(Flex)`
 `
 
 export const Image = styled.img`
-  position: absolute;
   z-index: 50;
   width: auto;
   height: 10em;
-  left: 1vw;
-  top: 1vw;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-drag: none;
@@ -35,8 +32,6 @@ export const Image = styled.img`
 `
 
 export const NavItems = styled(Flex)`
-  width: 100vw;
-  justify-content: flex-end;
   flex-direction: row;
   z-index: 50;
 
@@ -46,16 +41,26 @@ export const NavItems = styled(Flex)`
   }
 `
 
-export const Desktop = styled(Flex)`
-  height: 11em;
+export const LogoContainer = styled(Flex)`
+  height: auto;
+  width: auto;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+`
+
+export const Desktop = styled(Flex)`
+  width: 100vw;
+  height: 11em;
+  padding: 0 5em;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   overflow: hidden;
 
   @media only screen and (max-width: ${({ theme }) =>
       theme.breakpoints.headerStyle.ceiling}) {
     flex-direction: column;
+    justify-content: center;
   }
 `
 
@@ -69,10 +74,8 @@ export const Icon = styled(Flex)`
 `
 
 export const Logo = styled.img`
-  position: absolute;
   width: 14em;
   height: auto;
-  left: 8em;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-drag: none;
@@ -81,15 +84,7 @@ export const Logo = styled.img`
   z-index: 50;
 
   @media only screen and (max-width: ${({ theme }) =>
-      theme.breakpoints.headerStyle.ceiling}) {
-    position: relative;
-    left: 0;
-  }
-
-  @media only screen and (max-width: ${({ theme }) =>
       theme.breakpoints.small.ceiling}) {
-    width: 14em;
-    height: auto;
     margin-bottom: 0.7em;
   }
 `
