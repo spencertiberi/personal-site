@@ -8,7 +8,8 @@ import {
   Mobile,
   NavItem,
   Image,
-  NavItems
+  NavItems,
+  LogoContainer
 } from './styles'
 import { withRouter } from 'react-router-dom'
 import logo from './Signature.png'
@@ -26,8 +27,10 @@ class Navbar extends Component {
       <React.Fragment>
         <Container>
           <Desktop>
-            <Image src={ellie} alt="Spencer" />
-            <Logo src={logo} alt="Spencer Tiberi Logo" />
+            <LogoContainer>
+              <Image src={ellie} alt="Spencer" />
+              <Logo src={logo} alt="Spencer Tiberi Logo" />
+            </LogoContainer>
             <NavItems>
               <NavItem
                 to="/"

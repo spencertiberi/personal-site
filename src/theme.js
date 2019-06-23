@@ -11,8 +11,8 @@ const theme = {
       floor: '41.9em'
     },
     headerStyle: {
-      ceiling: '751px',
-      floor: '750px'
+      ceiling: '890px',
+      floor: '889px'
     }
   },
   colors: {
