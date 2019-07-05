@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { Flex } from 'grid-styled'
-import { Link } from 'react-router-dom'
 
 export const Container = styled(Flex)`
   flex-direction: column;
@@ -8,18 +7,18 @@ export const Container = styled(Flex)`
   position: relative;
 `
 
-export const NavItem = styled(Link)`
-  font-size: 2em;
-  margin: 0 0.6em 0 0.6em;
-  text-decoration: none;
-  font-family: ${({ theme }) => theme.fonts.main};
-  color: ${({ theme }) => theme.colors.header};
-  z-index: 2;
-  :hover,
-  &.active {
-    color: ${({ theme }) => theme.colors.header};
-    text-shadow: 1.5px 1.5px ${({ theme }) => theme.colors.headerAlt};
-    text-decoration: underline;
-    text-decoration-color: ${({ theme }) => theme.colors.mainAlt};
+export const Cards = styled(Flex)`
+  width: 70vw;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 850px;
+  margin-top: 1em;
+
+  @media only screen and (max-width: ${({ theme }) =>
+      theme.breakpoints.middle.ceiling}) {
+    width: 100vw;
+    background-color: ${({ theme }) => theme.colors.header};
+    margin-top: 0;
   }
 `
