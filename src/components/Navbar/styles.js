@@ -67,11 +67,12 @@ export const Desktop = styled(Flex)`
 
 export const Icon = styled(Flex)`
   font-size: 2.5em;
-  color: ${({ theme }) => theme.colors.header};
+  color: ${props => ({ theme }) =>
+    props.clicked ? theme.colors.headerAlt : theme.colors.header};
   position: absolute;
   top: 0.25em;
   right: 0.25em;
-  z-index: 2;
+  z-index: 100;
 `
 
 export const Logo = styled.img`
@@ -105,16 +106,17 @@ export const Mobile = styled(Flex)`
 export const Menu = styled(Flex)`
   flex-direction: column;
   position: absolute;
-  width: 100%;
+  align-items: center;
+  width: 100vw;
   height: auto;
   padding: 1em;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 100;
+  background-color: ${({ theme }) => theme.colors.header};
+  z-index: 50;
 
   @keyframes fadeIn {
     from {
-      left: 100%;
-      top: 0px;
+      left: 0px;
+      top: -160px;
     }
     to {
       left: 0px;
