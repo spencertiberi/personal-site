@@ -44,15 +44,7 @@ class Navbar extends Component {
                   this.props.location.pathname === '/resume' ? 'active' : ''
                 }
               >
-                Resume
-              </NavItem>
-              <NavItem
-                to="/blog"
-                className={
-                  this.props.location.pathname === '/blog' ? 'active' : ''
-                }
-              >
-                Blog
+                Résumé
               </NavItem>
               <NavItem
                 to="/projects"
@@ -73,10 +65,13 @@ class Navbar extends Component {
             <React.Fragment>
               <Menu>
                 <NavItem to="/">Home</NavItem>
-                <NavItem to="/resume">Resume</NavItem>
-                <NavItem to="/formerstrangers">Former Strangers</NavItem>
+                <NavItem to="/resume">Résumé</NavItem>
+                <NavItem to="/projects">Projects</NavItem>
               </Menu>
-              <Icon onClick={() => this.setState({ menuVisable: false })}>
+              <Icon
+                clicked="true"
+                onClick={() => this.setState({ menuVisable: false })}
+              >
                 &#10005;
               </Icon>
             </React.Fragment>

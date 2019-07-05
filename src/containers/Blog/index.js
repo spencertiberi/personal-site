@@ -11,19 +11,6 @@ class Blog extends Component {
       loading: true
     }
   }
-  componentDidMount() {
-    fetch(`https://medium.com/@aaron.klaser/latest?format=json`)
-      .then(response => response.json())
-      .then(data => {
-        this.setState({
-          posts: data.payload.references.Post,
-          loading: false
-        })
-      })
-      .catch(error => {
-        console.error(error)
-      })
-  }
   render() {
     return (
       <Container>

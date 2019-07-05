@@ -1,16 +1,23 @@
 import React from 'react'
 import Heading from '../../components/Heading'
-import { Container, NavItem } from './styles'
+import ProjectCard from './components/ProjectCard'
+import { Container, Cards } from './styles'
 
 const Projects = () => (
   <Container>
     <Heading> {`What I'm Working On`} </Heading>
-    <NavItem to="/projects/formerstrangers">Former Strangers</NavItem>
-    I take selfies with strangers, who are soon to be former strangers
-    <NavItem to="/projects/formerstrangers">Former Strangers</NavItem>
-    I take selfies with strangers, who are soon to be former strangers
-    <NavItem to="/projects/formerstrangers">Former Strangers</NavItem>
-    I take selfies with strangers, who are soon to be former strangers
+    <Cards>
+      <ProjectCard
+        link="/projects/formerstrangers"
+        title="Former Strangers"
+        description="I ask random strangers to take selfies with me with the hope that they will no longer be strangers."
+      />
+      <ProjectCard
+        link="/"
+        title="This Website"
+        description="Pretty meta, huh?"
+      />
+    </Cards>
   </Container>
 )
 
