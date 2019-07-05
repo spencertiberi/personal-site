@@ -4,14 +4,13 @@ import { Flex } from 'grid-styled'
 export const Company = styled(Flex)`
   height: auto;
   align-self: flex-start;
-  font-size: 1.25em;
+  font-size: 1.5em;
   padding: 0.25em 0em 0.25em 0em;
   color: ${props => ({ theme }) =>
     props.alt ? theme.colors.headerAlt : theme.colors.backgroundAlt};
 
   @media only screen and (max-width: ${({ theme }) =>
       theme.breakpoints.small.ceiling}) {
-    font-size: 1em;
     padding: 0;
   }
 `
@@ -55,14 +54,13 @@ export const Info = styled(Flex)`
 `
 
 export const Dates = styled(Flex)`
-  font-size: 0.85em;
+  font-size: 1em;
   align-self: flex-end;
   color: ${props => ({ theme }) =>
     props.alt ? theme.colors.headerAlt : theme.colors.backgroundAlt};
 
   @media only screen and (max-width: ${({ theme }) =>
       theme.breakpoints.small.ceiling}) {
-    font-size: 0.67em;
     margin-top: 0.33em;
     align-self: flex-start;
   }
@@ -71,16 +69,11 @@ export const Dates = styled(Flex)`
 export const Description = styled(Flex)`
   width: 100%;
   height: auto;
-  font-size: 1em;
+  font-size: 1.25em;
   padding: 0.5em 0 0.5em 0;
   text-align: justify;
   color: ${props => ({ theme }) =>
     props.alt ? theme.colors.background : theme.colors.mainDark};
-
-  @media only screen and (max-width: ${({ theme }) =>
-      theme.breakpoints.small.ceiling}) {
-    font-size: 0.85em;
-  }
 `
 
 export const Row = styled(Flex)`
@@ -98,7 +91,7 @@ export const Row = styled(Flex)`
 
 export const Title = styled(Flex)`
   font-family: ${({ theme }) => theme.fonts.heading};
-  font-size: 1.5em;
+  font-size: 1.75em;
   align-self: flex-end;
   color: ${props => ({ theme }) =>
     props.alt ? theme.colors.mainFont : theme.colors.header};
@@ -106,7 +99,6 @@ export const Title = styled(Flex)`
 
   @media only screen and (max-width: ${({ theme }) =>
       theme.breakpoints.small.ceiling}) {
-    font-size: 1.33em;
     align-self: flex-start;
     max-width: 80vw;
   }
