@@ -47,14 +47,22 @@ class Navbar extends Component {
                 Resume
               </NavItem>
               <NavItem
-                to="/formerstrangers"
+                to="/blog"
                 className={
-                  this.props.location.pathname === '/formerstrangers'
+                  this.props.location.pathname === '/blog' ? 'active' : ''
+                }
+              >
+                Blog
+              </NavItem>
+              <NavItem
+                to="/projects"
+                className={
+                  this.props.location.pathname.includes('/projects')
                     ? 'active'
                     : ''
                 }
               >
-                Former Strangers
+                Projects
               </NavItem>
             </NavItems>
           </Desktop>
