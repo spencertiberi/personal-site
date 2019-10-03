@@ -1,6 +1,9 @@
 {
-  "name": "react-frontend-starter",
-  "version": "0.1.0",
+  "name": "spencer-tiberi-site",
+  "version": "1.0.1",
+  "engines": {
+    "node": "8.11.2"
+  },
   "private": true,
   "dependencies": {
     "apollo-boost": "^0.1.9",
