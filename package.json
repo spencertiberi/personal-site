@@ -7,13 +7,13 @@
     "graphql": "^0.13.2",
     "grid-styled": "^5.0.2",
     "react": "^16.4.1",
-    "react-apollo": "^2.1.5",
+    "react-apollo": "^2.5.8",
     "react-burger-menu": "^2.5.4",
     "react-dom": "^16.4.1",
     "react-lazy-load": "^3.0.13",
     "react-markdown": "^4.1.0",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.4",
+    "react-scripts": "^3.1.2",
     "styled-components": "^4.1.2"
   },
   "devDependencies": {
