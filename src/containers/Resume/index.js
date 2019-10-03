@@ -21,7 +21,6 @@ const Resume = () => (
         alt="true"
         title="Teaching Fellow"
         start="August 2017"
-        end="December 2018"
         company="Harvard University"
       >
         {`I taught CS50, Harvard's introduction to comupter science course`}
