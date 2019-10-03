@@ -10,7 +10,7 @@ const Resume = () => (
     <Entries>
       <Title>Experience</Title>
       <JobEntry
-        title="Engineering Manager"
+        title="Product Manager"
         start="July 2018"
         company="Harvard University"
       >
